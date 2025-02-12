@@ -249,7 +249,7 @@ function setupMusicPlayer() {
     musicSource.src = config.music.musicUrl;
     bgMusic.volume = config.music.volume || 0.5;
     bgMusic.load();
-
+    bgMusic.currentTime = 1;
     // Try autoplay if enabled
     if (config.music.autoplay) {
         const playPromise = bgMusic.play();
@@ -262,6 +262,7 @@ function setupMusicPlayer() {
         }
         else musicToggle.textContent = config.music.stopText;
     }
+
     document.addEventListener("click", () => {
         console.log("Autoplay tried");
         if (config.music.autoplay) {

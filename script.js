@@ -134,6 +134,7 @@ function crazy(button) {
     button.style.position = 'fixed';
     button.style.left = x + 'px';
     button.style.top = y + 'px';
+    createFloatingElements();
 }
 
 // Love meter functionality

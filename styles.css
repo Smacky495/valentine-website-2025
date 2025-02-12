@@ -44,12 +44,6 @@ body {
     z-index: 1;
 }
 
-.heart, .bear {
-    position: absolute;
-    font-size: 2rem;
-    animation: float var(--float-duration, 15s) linear;
-}
-
 @keyframes float {
     from {
         transform: translateY(0);
@@ -57,9 +51,15 @@ body {
     }
 
     to {
-        transform: translateY(-50vh); /* Moves to the top */
-        opacity: 0; /* Fades out */
+        transform: translateY(-50vh);
+        opacity: 0;
     }
+}
+
+.heart, .bear {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 10s linear infinite; /* We override this dynamically in JS */
 }
 
 .cute-btn {

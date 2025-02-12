@@ -110,42 +110,29 @@ function createFloatingElements() {
 // Set random position for floating elements
 function setRandomPosition(element) {
     function restartAnimation() {
-        // Spawn in the bottom half (50vh - 100vh)
+        // Random position within the bottom half (50vh - 100vh)
         const startTop = 50 + Math.random() * 50 + 'vh';
         const startLeft = Math.random() * 100 + 'vw';
 
-        // Random duration (10s - 20s)
+        // Random duration (10s - 20s) and delay (0s - 5s)
         const duration = 10 + Math.random() * 10;
         const delay = Math.random() * 5;
 
-        // Apply new position
+        // Apply new random position
         element.style.left = startLeft;
         element.style.top = startTop;
 
-        // Generate a unique animation name
-        const uniqueAnimation = `float-${Math.random()}`;
-
-        // Create a new keyframe rule dynamically
-        const styleSheet = document.styleSheets[0];
-        styleSheet.insertRule(`
-            @keyframes ${uniqueAnimation} {
-                from { transform: translateY(0); opacity: 1; }
-                to { transform: translateY(-50vh); opacity: 0; }
-            }
-        `, styleSheet.cssRules.length);
-
-        // Reset animation and apply new one
+        // Force reflow and restart the animation
         element.style.animation = 'none';
-        void element.offsetWidth; // Force reflow
-        element.style.setProperty('--float-duration', `${duration}s`);
-        element.style.animation = `${uniqueAnimation} ${duration}s linear ${delay}s`;
+        void element.offsetWidth;  // Trigger reflow to reset
+        element.style.animation = `float ${duration}s linear ${delay}s`;
+
+        // Once animation ends, restart the animation with new values
+        element.addEventListener('animationend', restartAnimation, { once: true });
     }
 
     // Start the animation immediately
     restartAnimation();
-
-    // When animation ends, restart
-    element.addEventListener('animationend', restartAnimation);
 }
 
 

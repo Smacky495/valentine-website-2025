@@ -109,20 +109,33 @@ function createFloatingElements() {
 
 // Set random position for floating elements
 function setRandomPosition(element) {
-    // Randomize position
-    element.style.left = Math.random() * 100 + 'vw';
-    element.style.top = Math.random() * 100 + 'vh';
+    function restartAnimation() {
+        // Spawn in the bottom half (50vh - 100vh)
+        const startTop = 50 + Math.random() * 50 + 'vh';
+        const startLeft = Math.random() * 100 + 'vw';
 
-    // Randomize animation duration and delay
-    const duration = 5 + Math.random() * 15; // Between 5s - 20s
-    const delay = Math.random() * 5; // Between 0s - 5s
+        // Random duration (10s - 20s)
+        const duration = 10 + Math.random() * 10;
+        const delay = Math.random() * 5;
 
-    // Force restart animation
-    element.style.animation = 'none';
-    void element.offsetWidth; // Force reflow
-    element.style.setProperty('--float-duration', `${duration}s`);
-    element.style.animation = `float ${duration}s linear ${delay}s infinite`;
+        // Apply new position
+        element.style.left = startLeft;
+        element.style.top = startTop;
+
+        // Restart animation
+        element.style.animation = 'none';
+        void element.offsetWidth; // Force reflow
+        element.style.setProperty('--float-duration', `${duration}s`);
+        element.style.animation = `float ${duration}s linear ${delay}s`;
+    }
+
+    // Start the animation initially
+    restartAnimation();
+
+    // When animation ends, restart
+    element.addEventListener('animationend', restartAnimation);
 }
+
 
 // Function to show next question
 function showNextQuestion(questionNumber) {
@@ -245,15 +258,16 @@ function setupMusicPlayer() {
                 console.log("Autoplay prevented by browser...");
                 musicToggle.textContent = config.music.startText;
             });
+            musicToggle.textContent = config.music.stopText;
         }
     }
-    console.log("Autoplay ???");
     document.addEventListener("click", () => {
         console.log("Autoplay tried");
         if (config.music.autoplay) {
             bgMusic.play().catch(error => {
                 console.log("Autoplay still prevented");
             });
+            musicToggle.textContent = config.music.stopText;
         }
     }, { once: true });
 

@@ -47,27 +47,18 @@ body {
 .heart, .bear {
     position: absolute;
     font-size: 2rem;
-    animation: float var(--float-duration, 10s) linear infinite; /* Default 10s */
+    animation: float var(--float-duration, 15s) linear;
 }
 
 @keyframes float {
     from {
-        transform: translateY(100vh);
+        transform: translateY(0);
         opacity: 1;
     }
 
     to {
-        transform: translateY(-10vh);
-        opacity: 0;
-    }
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(100vh) translateX(0);
-    }
-    100% {
-        transform: translateY(-100px) translateX(var(--float-distance));
+        transform: translateY(-50vh); /* Moves to the top */
+        opacity: 0; /* Fades out */
     }
 }
 

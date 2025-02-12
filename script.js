@@ -128,6 +128,13 @@ function moveButton(button) {
     button.style.left = x + 'px';
     button.style.top = y + 'px';
 }
+function crazy(button) {
+    const x = Math.random() * (window.innerWidth - button.offsetWidth);
+    const y = Math.random() * (window.innerHeight - button.offsetHeight);
+    button.style.position = 'fixed';
+    button.style.left = x + 'px';
+    button.style.top = y + 'px';
+}
 
 // Love meter functionality
 const loveMeter = document.getElementById('loveMeter');
@@ -239,4 +246,6 @@ function setupMusicPlayer() {
             musicToggle.textContent = config.music.startText;
         }
     });
+
+
 } 

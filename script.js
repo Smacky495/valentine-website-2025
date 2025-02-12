@@ -258,8 +258,9 @@ function setupMusicPlayer() {
                 console.log("Autoplay prevented by browser...");
                 musicToggle.textContent = config.music.startText;
             });
-            musicToggle.textContent = config.music.stopText;
+          
         }
+        else musicToggle.textContent = config.music.stopText;
     }
     document.addEventListener("click", () => {
         console.log("Autoplay tried");

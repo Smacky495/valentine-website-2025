@@ -234,8 +234,9 @@ function setupMusicPlayer() {
             });
         }
     }
-
+    console.log("Autoplay ???");
     document.addEventListener("click", () => {
+        console.log("Autoplay tried");
         if (config.music.autoplay) {
             bgMusic.play().catch(error => {
                 console.log("Autoplay still prevented");

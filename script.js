@@ -225,16 +225,15 @@ function setupMusicPlayer() {
     bgMusic.volume = config.music.volume || 0.5;
     bgMusic.load();
 
-    // Try autoplay if enabled
-    if (config.music.autoplay) {
-        const playPromise = bgMusic.play();
-        if (playPromise !== undefined) {
-            playPromise.catch(error => {
-                console.log("Autoplay prevented by browser");
-                musicToggle.textContent = config.music.startText;
+
+    document.addEventListener("click", () => {
+        if (config.music.autoplay) {
+            bgMusic.play().catch(error => {
+                console.log("Autoplay still prevented");
             });
         }
-    }
+    }, { once: true });
+
 
     // Toggle music on button click
     musicToggle.addEventListener('click', () => {

@@ -79,7 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Create initial floating elements
     createFloatingElements();
-
+    createFloatingElements();
     // Setup music player
     setupMusicPlayer();
 });
@@ -122,20 +122,20 @@ function setRandomPosition(element) {
         element.style.left = startLeft;
         element.style.top = startTop;
 
-        // Restart animation
+        // Force animation reset using requestAnimationFrame
         element.style.animation = 'none';
-        void element.offsetWidth; // Force reflow
-        element.style.setProperty('--float-duration', `${duration}s`);
-        element.style.animation = `float ${duration}s linear ${delay}s`;
+        requestAnimationFrame(() => {
+            element.style.setProperty('--float-duration', `${duration}s`);
+            element.style.animation = `float ${duration}s linear ${delay}s`;
+        });
     }
 
-    // Start the animation initially
+    // Start the animation immediately
     restartAnimation();
 
     // When animation ends, restart
     element.addEventListener('animationend', restartAnimation);
 }
-
 
 // Function to show next question
 function showNextQuestion(questionNumber) {
@@ -157,6 +157,8 @@ function crazy(button) {
     button.style.position = 'fixed';
     button.style.left = x + 'px';
     button.style.top = y + 'px';
+    createFloatingElements();
+    createFloatingElements();
     createFloatingElements();
     createFloatingElements();
     createFloatingElements();

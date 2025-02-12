@@ -122,12 +122,23 @@ function setRandomPosition(element) {
         element.style.left = startLeft;
         element.style.top = startTop;
 
-        // Force animation reset using requestAnimationFrame
+        // Generate a unique animation name
+        const uniqueAnimation = `float-${Math.random()}`;
+
+        // Create a new keyframe rule dynamically
+        const styleSheet = document.styleSheets[0];
+        styleSheet.insertRule(`
+            @keyframes ${uniqueAnimation} {
+                from { transform: translateY(0); opacity: 1; }
+                to { transform: translateY(-50vh); opacity: 0; }
+            }
+        `, styleSheet.cssRules.length);
+
+        // Reset animation and apply new one
         element.style.animation = 'none';
-        requestAnimationFrame(() => {
-            element.style.setProperty('--float-duration', `${duration}s`);
-            element.style.animation = `float ${duration}s linear ${delay}s`;
-        });
+        void element.offsetWidth; // Force reflow
+        element.style.setProperty('--float-duration', `${duration}s`);
+        element.style.animation = `${uniqueAnimation} ${duration}s linear ${delay}s`;
     }
 
     // Start the animation immediately
@@ -136,6 +147,7 @@ function setRandomPosition(element) {
     // When animation ends, restart
     element.addEventListener('animationend', restartAnimation);
 }
+
 
 // Function to show next question
 function showNextQuestion(questionNumber) {

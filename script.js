@@ -109,9 +109,19 @@ function createFloatingElements() {
 
 // Set random position for floating elements
 function setRandomPosition(element) {
+    // Randomize position
     element.style.left = Math.random() * 100 + 'vw';
-    element.style.animationDelay = Math.random() * 5 + 's';
-    element.style.animationDuration = 10 + Math.random() * 20 + 's';
+    element.style.top = Math.random() * 100 + 'vh';
+
+    // Randomize animation duration and delay
+    const duration = 5 + Math.random() * 15; // Between 5s - 20s
+    const delay = Math.random() * 5; // Between 0s - 5s
+
+    // Force restart animation
+    element.style.animation = 'none';
+    void element.offsetWidth; // Force reflow
+    element.style.setProperty('--float-duration', `${duration}s`);
+    element.style.animation = `float ${duration}s linear ${delay}s infinite`;
 }
 
 // Function to show next question
@@ -134,6 +144,8 @@ function crazy(button) {
     button.style.position = 'fixed';
     button.style.left = x + 'px';
     button.style.top = y + 'px';
+    createFloatingElements();
+    createFloatingElements();
     createFloatingElements();
 }
 

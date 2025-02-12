@@ -186,7 +186,11 @@ loveMeter.addEventListener('input', () => {
         loveMeter.style.transition = 'width 0.3s';
         
         // Show different messages based on the value
-        if (value == 10000) {
+        if (value == 69) {
+            extraLove.classList.add('super-love');
+            extraLove.textContent = "Ayo want to do 69?? ;)";
+        }
+        else  if (value == 10000) {
             extraLove.classList.add('super-love');
             extraLove.textContent = "Want me to finish you? ;)";
         }

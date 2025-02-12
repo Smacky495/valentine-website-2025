@@ -52,7 +52,7 @@ body {
 
     to {
         transform: translateY(-50vh);
-        opacity: 0;
+        opacity: 0.33;
     }
 }
 
@@ -94,8 +94,8 @@ body {
     bottom: 25px;
     right: 25px;
     margin-top: 0;
-    opacity: 0.356;
-    transition: opacity 0.3s;
+    opacity: 0.43;
+    transition: opacity 0.2s;
     transform: scale(0.7);
     z-index: 2;
     animation: subtle-hint 2s infinite alternate;
@@ -103,8 +103,8 @@ body {
 }
 
 .secret-answer .cute-btn {
-    font-size: 0.8rem;
-    padding: 5px 10px;
+    font-size: 0.9rem;
+    padding: 8px 12px;
 }
 
 .secret-answer:hover {

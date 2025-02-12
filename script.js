@@ -80,7 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Create initial floating elements
     createFloatingElements();
     createFloatingElements();
-    // Setup music player
+    // Setup music playerc
     setupMusicPlayer();
 });
 
@@ -115,8 +115,8 @@ function setRandomPosition(element) {
         const startLeft = Math.random() * 100 + 'vw';
 
         // Random duration (10s - 20s) and delay (0s - 5s)
-        const duration = 10 + Math.random() * 10;
-        const delay = Math.random() * 5;
+        const duration = 9 + Math.random() * 8;
+        const delay = Math.random() * 1;
 
         // Apply new random position
         element.style.left = startLeft;

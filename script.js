@@ -213,7 +213,6 @@ function setupMusicPlayer() {
     const musicToggle = document.getElementById('musicToggle');
     const bgMusic = document.getElementById('bgMusic');
     const musicSource = document.getElementById('musicSource');
-
     // Only show controls if music is enabled in config
     if (!config.music.enabled) {
         musicControls.style.display = 'none';

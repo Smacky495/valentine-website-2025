@@ -37,14 +37,13 @@ body {
     position: relative;
 }
 .gif-container {
-    position: absolute; /* Positions relative to .container */
-    bottom: 10px; /* 10px from the bottom */
-    left: 50%; /* Move to the center */
-    transform: translateX(-50%); /* Perfect center alignment */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 20px; /* Adds space above */
 }
 
 .gif {
-    width: 200px; /* Adjust the size of the GIF */
+    width: 240px; /* Adjust the size of the GIF */
     height: auto; /* Maintain aspect ratio */
 }
 

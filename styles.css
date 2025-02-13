@@ -37,10 +37,10 @@ body {
     position: relative;
 }
 .gif-container {
-    position: absolute; /* Position relative to .container */
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
+    position: absolute; /* Positions relative to .container */
+    bottom: 10px; /* 10px from the bottom */
+    left: 50%; /* Move to the center */
+    transform: translateX(-50%); /* Perfect center alignment */
 }
 
 .gif {

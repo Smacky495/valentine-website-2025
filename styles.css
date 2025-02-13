@@ -13,17 +13,6 @@
     --bounce-speed: 0.5s;
     --heart-explosion-size: 1.5;
 }
-.gif-container {
-    position: fixed; /* Fixed position on the screen */
-    top: 50%; /* Vertically centered */
-    right: 10px; /* 10px from the right side */
-    transform: translateY(-50%); /* Ensure it’s perfectly centered vertically */
-}
-
-.gif {
-    width: 200px; /* Adjust the size of the GIF */
-    height: auto; /* Maintain aspect ratio */
-}
 
 body {
     margin: 0;
@@ -45,6 +34,18 @@ body {
     max-width: 600px;
     margin: 20px;
     overflow: visible !important;
+    position: relative;
+}
+.gif-container {
+    position: absolute; /* Position relative to .container */
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.gif {
+    width: 200px; /* Adjust the size of the GIF */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .floating-elements {

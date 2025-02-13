@@ -33,32 +33,6 @@
           "SelectedChildIndex": 11,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\nojus\\source\\repos\\Smacky495\\valentine-website-2025\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\nojus\\source\\repos\\Smacky495\\valentine-website-2025\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-12T19:35:05.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "config.js",
-              "DocumentMoniker": "C:\\Users\\nojus\\source\\repos\\Smacky495\\valentine-website-2025\\config.js",
-              "RelativeDocumentMoniker": "config.js",
-              "ToolTip": "C:\\Users\\nojus\\source\\repos\\Smacky495\\valentine-website-2025\\config.js",
-              "RelativeToolTip": "config.js",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAC4AAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-12T18:22:19.944Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
@@ -88,13 +62,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\nojus\\source\\repos\\Smacky495\\valentine-website-2025\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\nojus\\source\\repos\\Smacky495\\valentine-website-2025\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-12T19:35:05.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "config.js",
+              "DocumentMoniker": "C:\\Users\\nojus\\source\\repos\\Smacky495\\valentine-website-2025\\config.js",
+              "RelativeDocumentMoniker": "config.js",
+              "ToolTip": "C:\\Users\\nojus\\source\\repos\\Smacky495\\valentine-website-2025\\config.js",
+              "RelativeToolTip": "config.js",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-12T18:22:19.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "styles.css",
               "DocumentMoniker": "C:\\Users\\nojus\\source\\repos\\Smacky495\\valentine-website-2025\\styles.css",
               "RelativeDocumentMoniker": "styles.css",
               "ToolTip": "C:\\Users\\nojus\\source\\repos\\Smacky495\\valentine-website-2025\\styles.css",
               "RelativeToolTip": "styles.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4BAAAA9NNPP/0nwEsBAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-02-12T19:04:50.666Z",
               "EditorCaption": ""
@@ -107,7 +107,7 @@
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\nojus\\source\\repos\\Smacky495\\valentine-website-2025\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAADUAAAAAAAAAAAAvwEQAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAvwDQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-02-12T18:55:04.36Z",
               "EditorCaption": ""
@@ -120,7 +120,7 @@
               "RelativeDocumentMoniker": "script.js",
               "ToolTip": "C:\\Users\\nojus\\source\\repos\\Smacky495\\valentine-website-2025\\script.js",
               "RelativeToolTip": "script.js",
-              "ViewState": "AgIAALQAAAAAAAAAAAAgwMEAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAWwMAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-02-12T18:52:43.942Z",
               "EditorCaption": ""
